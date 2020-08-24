@@ -1,8 +1,9 @@
 # CLIP-2020
 
-Repo para practicas en clip 2020
+Repositorio para practicas en Clip 2020
+Ver en vivo los resultados: [Click Aqui](http://emaflores.me/CLIP-2020/nuevo.html)
 
-# HACER
+## HACER
 
 * Diseña un sitio web (contenido a elección) de 2 o 3 páginas web que incluya:
 * Etiquetas semánticas (html5).
