@@ -2,7 +2,7 @@
 
 Repositorio para practicas en Clip 2020
 --
-Ver en vivo los resultados: [Click Aqui](http://emaflores.me/CLIP-2020/nuevo.html)
+Ver en vivo los resultados: [Click Aqui](http://emaflores.me/CLIP-2020/index.html)
 
 Tareas
 --
