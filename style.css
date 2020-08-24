@@ -1,5 +1,16 @@
 /* estilo externo */
 
 table {
-    background-color: gray;
+    background-color: lightgray;
+    width: 40%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+span {
+    font-style: italic;
 }
