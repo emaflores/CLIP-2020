@@ -14,4 +14,5 @@ Tareas
 * Estilos externos e internos (CSS3).
 * Agregar Boostrap:
     - Una barra de navegacion que permita movernos por las paginas web del sitio
-    - Un formulario de contacto (datos obligatorios: Apellido, Nombre, Email y Mensaje) verificando Email en el formato correcto
+    - Un formulario de contacto (datos obligatorios: Apellido, Nombre, Email y Mensaje) 
+      verificando Email en el formato correcto
