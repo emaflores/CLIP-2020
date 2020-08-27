@@ -1,0 +1,73 @@
+/* estilo externo */
+
+table {
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+img#uno {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+span#firma {
+    font-style: italic;
+    float: right;
+}
+
+table, th, td {
+    border: solid 1px black;
+}
+
+body {
+    animation: fondo_con 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fondo_con {
+    0%{background-color: black;
+        color: white;
+        }
+    100%{background-color: white;
+        } 
+}
+
+#cursos {
+    animation: fondo 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fondo {
+    0%{background-color: white;
+        }
+    100%{background-color: black;
+        color: white;
+        } 
+}
+
+p {
+    text-align: justify;
+}
+
+aside {
+    width: 30%;
+    float: right;
+    padding-left: 5px;
+}
+
+aside ul {
+    border: black 1px solid;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus{
+    transition: transform 2s;
+    box-shadow: 0px 0px 25px lightgreen;
+    transform: scale(1.2);
+}
