@@ -13,8 +13,9 @@ img {
     margin-right: auto;
 
 }
-span {
+span#firma {
     font-style: italic;
+    float: right;
 }
 
 table, th, td {

@@ -12,4 +12,6 @@ Tareas
 * Al menos una imágen (html5).
 * Al menos una tabla.
 * Estilos externos e internos (CSS3).
-* Agregar Boostrap
+* Agregar Boostrap:
+    - Una barra de navegacion que permita movernos por las paginas web del sitio
+    - Un formulario de contacto (datos obligatorios: Apellido, Nombre, Email(formato correcto) y Mensaje)
