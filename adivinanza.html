@@ -60,7 +60,7 @@
                 if (!!document.getElementById("inco")){
                     document.getElementById("inco").remove();
                 }
-                document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='noticia'>Ganaste!!</div>");
+                document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='win alert alert-success' role='alert'>Ganaste!!</div>");
                 j = document.getElementById("button");
                 j.setAttribute("disabled","disabled");
                 if (!!document.getElementById("pista")){
@@ -82,6 +82,9 @@
                 b--;
                 document.getElementById("num").textContent = b;
                 if (b==0) {
+                    if (notwin){
+                        document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='lose alert alert-danger' role='alert'>Perdiste!!</div>");
+                    }
                 j = document.getElementById("button");
                 j.setAttribute("disabled","disabled");
                 if (!!document.getElementById("pista")){
