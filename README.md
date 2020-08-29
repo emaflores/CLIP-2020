@@ -21,3 +21,4 @@ Tareas
     - facilitar al usuario 2 pistas si el usuario no acierta, en los intentos 2 y 3
     - informar en todo momento al usuario el numero de intentos que le quedan
     - informar el resultado final (si acierta o si perdio los 4 intentos)
+    - (opcional) usar los Alerts de Bootstrap 4 para informar al usuario
