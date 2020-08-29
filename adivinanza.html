@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Adivinanza</title>
+</head>
+<body onload="javascript: document.getElementById('num').textContent = 4">
+    <header>
+        <div id="arriba" style="text-align: center; border: black solid 1px; background: lightgray;">
+            <h2>Pagina de Emanuel Flores</h2>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cursos.html">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-danger" href="#">Adivinanza</a>
+              </li>
+            </ul>
+          </nav>
+
+        <br><br>
+    </header>
+
+    <h3>Adivina adivinador ¿?</h3>
+    <div style="border:black 1px solid; padding: 50px; text-align: center; word-wrap: break-word;">
+        <h4>Sirvo para indicar en el html contenido no relacionado con la pagina actual. Quien soy?</h4><br>
+        <input id="text" type="text"><br><br>
+        numero de intentos: <span id="num"></span><br><br>
+        <button id="button" onclick="envie()" type="submit">Enviar Respuesta</button><br><br>
+        
+    </div>
+    <script>
+        var b = 4;
+        var firsttime = true;
+        var nop = true;
+        var notwin = true;
+        var j;
+        function envie(){
+            var a = document.getElementById("text").value;
+            if (a === "aside"){
+                notwin = false;
+                if (!!document.getElementById("inco")){
+                    document.getElementById("inco").remove();
+                }
+                document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='noticia'>Ganaste!!</div>");
+                j = document.getElementById("button");
+                j.setAttribute("disabled","disabled");
+                if (!!document.getElementById("pista")){
+                    document.getElementById("pista").setAttribute("disabled","disabled");
+                }
+
+            } else {
+                if (nop == true){
+                    document.getElementById("text").insertAdjacentHTML("afterend","<span id='inco' style='color: red;'><br><br>Incorrecta</span>");
+                    nop = false;
+                }
+                
+            }
+            if (firsttime && notwin){
+                document.getElementById("button").insertAdjacentHTML("afterend","<br><br><button onclick='pistas()' id='pista' type='submit'>Ver pista</button>");
+                firsttime = false;
+            }
+            if (b > 0 && notwin){
+                b--;
+                document.getElementById("num").textContent = b;
+                if (b==0) {
+                j = document.getElementById("button");
+                j.setAttribute("disabled","disabled");
+                if (!!document.getElementById("pista")){
+                    document.getElementById("pista").setAttribute("disabled","disabled");
+                }
+            }
+            }
+            
+        }
+        var pista = 0;
+        var dado1 = false;
+        var dado2 = false;
+        function pistas() {
+            if (b == 3 && !dado1) {
+                document.getElementById("button").insertAdjacentHTML("afterend","<br><br><span id='a' style='color: blue;'>Empieza con a</span>");
+                dado1 = true;
+            } else if (b == 2 && !dado2) {
+                if (!!document.getElementById("a")){
+                    document.getElementById("a").insertAdjacentHTML("afterend","<br><br><span style='color: blue;'>Termina con e</span>");
+                } else {
+                    document.getElementById("button").insertAdjacentHTML("afterend","<br><br><span style='color: blue;'>Termina con e</span>");
+                }
+                dado2 = true;
+            }
+            
+        }
+    </script>
+</body>
+</html>
