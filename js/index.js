@@ -55,7 +55,6 @@ function envie(){
 }
 
 /* Funcion para mostrar pistas */
-var pista = 0;
 var dado1 = false;
 var dado2 = false;
 function pistas() {
@@ -85,6 +84,8 @@ function reset() {
     firsttime = true;
     nop = true;
     notwin = true;
+    dado1 = false;
+    dado2 = false;
 
     if (!!document.getElementById("a")){
         document.getElementById("a").remove();
