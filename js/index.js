@@ -13,37 +13,43 @@ function envie(){
         if (!!document.getElementById("inco")){
             document.getElementById("inco").remove();
         }
-        document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='win alert alert-success' role='alert'>Ganaste!!</div>");
+        document.getElementById("text").insertAdjacentHTML("afterend","<div id='win'><br><br><div class='win alert alert-success' role='alert'>Ganaste!!</div></div>");
         j = document.getElementById("button");
         j.setAttribute("disabled","disabled");
         if (!!document.getElementById("pista")){
             document.getElementById("pista").setAttribute("disabled","disabled");
         }
+        document.getElementById("button").insertAdjacentHTML("afterend","<button id='nuevo' onclick='reset()' type='submit'>Jugar de nuevo</button>");
 
     } else {
         if (nop == true){
-            document.getElementById("text").insertAdjacentHTML("afterend","<span id='inco' style='color: red;'><br><br>Incorrecta</span>");
+            document.getElementById("text").insertAdjacentHTML("afterend","<span id='inco' style='color: red;'><br>Incorrecta</span>");
             nop = false;
         }
         
     }
     if (firsttime && notwin){
-        document.getElementById("button").insertAdjacentHTML("afterend","<br><br><button onclick='pistas()' id='pista' type='submit'>Ver pista</button>");
+        document.getElementById("button").insertAdjacentHTML("afterend","<div id='id_pista'><br><button id='pista' onclick='pistas()' type='submit'>Ver pista</button></div>");
         firsttime = false;
     }
     if (b > 0 && notwin){
         b--;
         document.getElementById("num").textContent = b;
+        b==1 ? document.getElementById("pista").setAttribute("disabled","disabled") : document.getElementById("pista").removeAttribute("disabled","disabled");
         if (b==0) {
             if (notwin){
-                document.getElementById("text").insertAdjacentHTML("afterend","<br><br><div class='lose alert alert-danger' role='alert'>Perdiste!!</div>");
+                if (!!document.getElementById("inco")){
+                    document.getElementById("inco").remove();
+                }
+                document.getElementById("text").insertAdjacentHTML("afterend","<div id='lose'><br><br><div class='lose alert alert-danger' role='alert'>Perdiste!!</div></div>");
             }
-        j = document.getElementById("button");
-        j.setAttribute("disabled","disabled");
-        if (!!document.getElementById("pista")){
-            document.getElementById("pista").setAttribute("disabled","disabled");
+            j = document.getElementById("button");
+            j.setAttribute("disabled","disabled");
+            if (!!document.getElementById("pista")){
+                document.getElementById("pista").setAttribute("disabled","disabled");
+            }
+            document.getElementById("button").insertAdjacentHTML("afterend","<button id='nuevo' onclick='reset()' type='submit'>Jugar de nuevo</button>");
         }
-    }
     }
     
 }
@@ -54,15 +60,57 @@ var dado1 = false;
 var dado2 = false;
 function pistas() {
     if (b == 3 && !dado1) {
-        document.getElementById("button").insertAdjacentHTML("afterend","<br><br><span id='a' style='color: blue;'>Empieza con a</span>");
+        document.getElementById("button").insertAdjacentHTML("afterend","<span id='a' style='color: blue;'><br><br>Empieza con a</span>");
         dado1 = true;
+        
+        document.getElementById("pista").setAttribute("disabled","disabled");
+    
     } else if (b == 2 && !dado2) {
+
         if (!!document.getElementById("a")){
-            document.getElementById("a").insertAdjacentHTML("afterend","<br><br><span style='color: blue;'>Termina con e</span>");
+            document.getElementById("a").insertAdjacentHTML("afterend","<span id='b' style='color: blue;'><br><br>Termina con e</span>");
         } else {
-            document.getElementById("button").insertAdjacentHTML("afterend","<br><br><span style='color: blue;'>Termina con e</span>");
+            document.getElementById("button").insertAdjacentHTML("afterend","<span id='b' style='color: blue;'><br><br>Termina con e</span>");
         }
         dado2 = true;
+
+        document.getElementById("pista").setAttribute("disabled","disabled");
     }
     
+}
+
+/* Funcion para resetar el juego */
+function reset() {
+    b = 4;
+    firsttime = true;
+    nop = true;
+    notwin = true;
+
+    if (!!document.getElementById("a")){
+        document.getElementById("a").remove();
+    }
+
+    if (!!document.getElementById("b")){
+        document.getElementById("b").remove();
+    }
+
+    if (!!document.getElementById("win")){
+        document.getElementById("win").remove();
+    }
+
+    if (!!document.getElementById("lose")){
+        document.getElementById("lose").remove();
+    }
+
+    if (!!document.getElementById("inco")){
+        document.getElementById("inco").remove();
+    }
+
+    if (!!document.getElementById("id_pista")){
+        document.getElementById("id_pista").remove();
+    }
+    document.getElementById("nuevo").remove();
+    document.getElementById("text").value = "";
+    j = document.getElementById("button");
+    j.removeAttribute("disabled", "disabled");
 }

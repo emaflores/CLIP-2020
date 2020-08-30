@@ -54,16 +54,16 @@ body {
     animation: fondo_noc 1s;
     animation-iteration-count: infinite;
     position: absolute;
-    left: 25%;
-    width: 50%;
+    left: 37%;
+    width: 25%;
 }
 @keyframes fondo_noc {
-    0%{color: white;
+    0%{color: transparent;
     }
     50%{color: green;
         transform: scale(1.5);
     }
-    100%{color: white;
+    100%{color: transparent;
     }
     }
 
@@ -74,16 +74,16 @@ body {
     animation: fondo_noc2 1s;
     animation-iteration-count: infinite;
     position: absolute;
-    left: 25%;
-    width: 50%;
+    left: 37%;
+    width: 25%;
 }
 @keyframes fondo_noc2 {
-    0%{color: white;
+    0%{color: transparent;
     }
     50%{color: red;
         transform: scale(1.5);
     }
-    100%{color: white;
+    100%{color: transparent;
     }
     }
 
