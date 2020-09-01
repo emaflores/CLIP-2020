@@ -1,11 +1,27 @@
 /* Emanuel Flores */
 
+function reload()
+{ 
+    
+}
+
+
+/* Funcion para enviar cuando se aprete enter */
+var input = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("button").click();
+  }
+});
+
 /* Funcion para enviar respuesta */
 var b = 4;
 var firsttime = true;
 var nop = true;
 var notwin = true;
 var j;
+var i = 1;
 function envie(){
     var a = document.getElementById("text").value;
     if (a === "aside"){
@@ -34,7 +50,17 @@ function envie(){
     }
     if (b > 0 && notwin){
         b--;
+        
+        // document.getElementById("num").style.animationPlayState = "running";
+        
         document.getElementById("num").textContent = b;
+        const ee = document.getElementById("num");
+
+        ee.classList.remove('fail'); // reset animation
+        void ee.offsetWidth; // trigger reflow
+        ee.classList.add('fail'); // start animation
+
+
         b==1 ? document.getElementById("pista").setAttribute("disabled","disabled") : document.getElementById("pista").removeAttribute("disabled","disabled");
         if (b==0) {
             if (notwin){
@@ -81,6 +107,11 @@ function pistas() {
 /* Funcion para resetar el juego */
 function reset() {
     b = 4;
+    document.getElementById("num").textContent = b;
+    const ee = document.getElementById("num");
+    ee.classList.remove('fail'); // reset animation
+    void ee.offsetWidth; // trigger reflow
+    ee.classList.add('fail'); // start animation
     firsttime = true;
     nop = true;
     notwin = true;
