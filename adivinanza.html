@@ -1,69 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-  <title>Adivinanza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Adivinanza</title>
 </head>
 
 <body onload="javascript: document.getElementById('num').textContent = 4">
-  <div style="background-image: url(img/bg5.png);">
     <div class="container head">
-      <header>
-        <div id="arriba" style="text-align: center; border: black solid 1px; background: lightgray; color: black;">
-          <h2>Pagina de Emanuel Flores</h2>
-        </div>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cursos.html">Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link text-danger" href="#">Adivinanza</a>
-            </li>
-          </ul>
-        </nav>
-
-        <br><br>
-      </header>
+        <header>
+            <div id="arriba">
+                <h2>Pagina de Emanuel Flores</h2>
+            </div>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-danger" href="#">Adivinanza</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
     <div class="container">
+        <div class="row h-100 justify-content-center align-items-center text-center">
+            <br>
+            <main>
+                <h2 id="adivina">
+                    <span id="s1">A</span><span id="s2">d</span><span id="s3">i</span><span id="s4">v</span><span id="s5">i</span><span id="s6">n</span><span id="s7">a</span>
+                    <span id="s8">a</span><span id="s9">d</span><span id="s10">i</span><span id="s11">v</span><span id="s12">i</span><span id="s13">n</span><span id="s14">a</span><span id="s15">d</span><span id="s16">o</span><span id="s17">r</span>
+                    <span id="s18">.</span><span id="s19">.</span><span id="s20">.</span>
+                </h2>
+                <div id="pregunta">
+                    <h4>Elemento HTML que contiene metadatos sobre el documento, como su título , scripts y hojas de estilo</h4><br>
+                    <span>Intentos: </span>&nbsp; <span id="num" class="fail"></span><br><br>
+                    <input id="text" type="text"><br><br>
+                    <button id="button" onclick="envie()" type="submit">Enviar Respuesta</button><br><br>
+                </div>
+            </main>
+            <footer>
+                <audio id="sound_win" src="audio/win.mp3"></audio>
+                <audio id="sound_lose" src="audio/lose.mp3"></audio>
+                <br>
 
-      <main>
-        <h3 style="color: white;">Adivina adivinador ¿?</h3>
-        <div style="border:black 1px solid; padding: 50px; text-align: center; word-wrap: break-word; background: white;">
-          <h4>Sirvo para indicar en el html contenido no relacionado con la pagina actual. Quien soy?</h4><br>
-          numero de intentos: &nbsp; <span id="num" class="fail" onchange=""></span><br><br>
-          <input id="text" type="text"><br><br>
-          <button id="button" onclick="envie()" type="submit">Enviar Respuesta</button><br><br>
+                <span id="firma" style="color: white;">Hecho con &hearts; por Emanuel Flores &copy;</span>
+            </footer>
 
         </div>
-      </main>
-      <footer>
-        <br>
-        <br>
-        <br>
-        <br>
-        <span id="firma" style="color: white;">Hecho con &hearts; por Emanuel Flores &copy;</span>
-      </footer>
     </div>
-  </div>
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
