@@ -25,11 +25,16 @@ Tareas
 
 ## Como Trabaje:
 
-Inicie el repositorio vacio en GitHub, y desde ahi lo clone.
-Empece realizando actividades en la rama principal o Master
-Al poco tiempo comence a trabajar en una rama alternativa
-para probar ideas y luego fusionarlas
-Esto lo realice en la rama desarrollo:
+Inicie el repositorio vacio en GitHub, y desde ahi lo clone. Empece realizando actividades en la rama principal o Master. Al poco tiempo comence a trabajar en una rama alternativa
+para probar ideas y luego fusionarlas. Esto lo realice en la rama desarrollo:
 ![alt text1](img/timeline.jpg "grafico1")
 
-Se hizo uso de la mayoria de herramientas presentadas, tanto con HTML, CSS JavaScript y Bootstrap 4
+Se hizo uso de la mayoria de herramientas presentadas, tanto con [HTML5](https://es.wikipedia.org/wiki/HTML5), [CSS3](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada#CSS3), [JavaScript](https://es.wikipedia.org/wiki/JavaScript) y [Bootstrap 4](https://es.wikipedia.org/wiki/Bootstrap_(framework))
+
+Todo de la mano de los excelentes mentores:
+
+Lorena Alejandra FACCENDINI - [Email](mailto:lfaccendini@gmail.com) - [Linkedin](https://www.linkedin.com/in/lorena-faccendini/)
+
+Narciso Héctor PEREZ - [Email](mailto:narcisoperez@gmail.com) - [Linkedin](https://www.linkedin.com/in/narciso-perez-b9177b18/)
+
+> Hecho con &hearts; por Emanuel Flores &copy; - 2020
