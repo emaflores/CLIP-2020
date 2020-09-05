@@ -23,7 +23,7 @@ Tareas
     - informar el resultado final (si acierta o si perdio los 4 intentos)
     - (opcional) usar los Alerts de Bootstrap 4 para informar al usuario
 
-Como Trabaje:
+## Como Trabaje:
 
 Inicie el repositorio vacio en GitHub, y desde ahi lo clone.
 Empece realizando actividades en la rama principal o Master
