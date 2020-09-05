@@ -18,7 +18,18 @@ Tareas
       verificando Email en el formato correcto
 * Agregar JavaScript: Agregar una adivinanza tal que
     - contenga un cuadro de texto y un boton
-    - facilitar al usuario 2 pistas si el usuario no acierta, en los intentos 2 y 3
+    - facilitar al usuario 2 pistas si el usuario no acierta en los intentos 2 y 3
     - informar en todo momento al usuario el numero de intentos que le quedan
     - informar el resultado final (si acierta o si perdio los 4 intentos)
     - (opcional) usar los Alerts de Bootstrap 4 para informar al usuario
+
+Como Trabaje:
+
+Inicie el repositorio vacio en GitHub, y desde ahi lo clone.
+Empece realizando actividades en la rama principal o Master
+Al poco tiempo comence a trabajar en una rama alternativa
+para probar ideas y luego fusionarlas
+Esto lo realice en la rama desarrollo:
+![alt text1](img/timeline.jpg "grafico1")
+
+Se hizo uso de la mayoria de herramientas presentadas, tanto con HTML, CSS JavaScript y Bootstrap 4
